@@ -12,6 +12,11 @@
 		DB6A21B01F964BDB007CE01D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6A21AE1F964BDB007CE01D /* Main.storyboard */; };
 		DB6A21B21F964BDB007CE01D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6A21B11F964BDB007CE01D /* Assets.xcassets */; };
 		DB6A21B51F964BDB007CE01D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6A21B31F964BDB007CE01D /* LaunchScreen.storyboard */; };
+		DB6A21BE1F9657AA007CE01D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A21BD1F9657AA007CE01D /* CoreDataStack.swift */; };
+		DB6A21C11F9657F9007CE01D /* NewsDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB6A21BF1F9657F9007CE01D /* NewsDB.xcdatamodeld */; };
+		DB6A21C31F965A5C007CE01D /* NewBBCManaged+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A21C21F965A5C007CE01D /* NewBBCManaged+Mapping.swift */; };
+		DB6A21C51F965A6B007CE01D /* NewBBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A21C41F965A6B007CE01D /* NewBBC.swift */; };
+		DB6A21C71F965F63007CE01D /* RemoteBBC_NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A21C61F965F63007CE01D /* RemoteBBC_NewsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		DB6A21B11F964BDB007CE01D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB6A21B41F964BDB007CE01D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB6A21B61F964BDB007CE01D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB6A21BD1F9657AA007CE01D /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		DB6A21C01F9657F9007CE01D /* NewsDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsDB.xcdatamodel; sourceTree = "<group>"; };
+		DB6A21C21F965A5C007CE01D /* NewBBCManaged+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewBBCManaged+Mapping.swift"; sourceTree = "<group>"; };
+		DB6A21C41F965A6B007CE01D /* NewBBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBBC.swift; sourceTree = "<group>"; };
+		DB6A21C61F965F63007CE01D /* RemoteBBC_NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBBC_NewsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,27 @@
 		DB6A21A91F964BDA007CE01D /* RetoSantander */ = {
 			isa = PBXGroup;
 			children = (
+				DB6A21BC1F965776007CE01D /* BBDD */,
 				DB6A21AA1F964BDB007CE01D /* AppDelegate.swift */,
 				DB6A21AC1F964BDB007CE01D /* ViewController.swift */,
 				DB6A21AE1F964BDB007CE01D /* Main.storyboard */,
 				DB6A21B11F964BDB007CE01D /* Assets.xcassets */,
 				DB6A21B31F964BDB007CE01D /* LaunchScreen.storyboard */,
 				DB6A21B61F964BDB007CE01D /* Info.plist */,
+				DB6A21C61F965F63007CE01D /* RemoteBBC_NewsService.swift */,
 			);
 			path = RetoSantander;
+			sourceTree = "<group>";
+		};
+		DB6A21BC1F965776007CE01D /* BBDD */ = {
+			isa = PBXGroup;
+			children = (
+				DB6A21BF1F9657F9007CE01D /* NewsDB.xcdatamodeld */,
+				DB6A21BD1F9657AA007CE01D /* CoreDataStack.swift */,
+				DB6A21C21F965A5C007CE01D /* NewBBCManaged+Mapping.swift */,
+				DB6A21C41F965A6B007CE01D /* NewBBC.swift */,
+			);
+			path = BBDD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6A21BE1F9657AA007CE01D /* CoreDataStack.swift in Sources */,
 				DB6A21AD1F964BDB007CE01D /* ViewController.swift in Sources */,
+				DB6A21C11F9657F9007CE01D /* NewsDB.xcdatamodeld in Sources */,
 				DB6A21AB1F964BDB007CE01D /* AppDelegate.swift in Sources */,
+				DB6A21C51F965A6B007CE01D /* NewBBC.swift in Sources */,
+				DB6A21C31F965A5C007CE01D /* NewBBCManaged+Mapping.swift in Sources */,
+				DB6A21C71F965F63007CE01D /* RemoteBBC_NewsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +350,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DB6A21BF1F9657F9007CE01D /* NewsDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB6A21C01F9657F9007CE01D /* NewsDB.xcdatamodel */,
+			);
+			currentVersion = DB6A21C01F9657F9007CE01D /* NewsDB.xcdatamodel */;
+			path = NewsDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DB6A219F1F964BDA007CE01D /* Project object */;
 }
