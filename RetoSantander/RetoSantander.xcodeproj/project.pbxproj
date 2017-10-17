@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CAC1C793EE2407D213D8940C /* Pods_RetoSantander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC1631E03A53FD737FB8C7 /* Pods_RetoSantander.framework */; };
 		DB6A21AB1F964BDB007CE01D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A21AA1F964BDB007CE01D /* AppDelegate.swift */; };
 		DB6A21AD1F964BDB007CE01D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A21AC1F964BDB007CE01D /* ViewController.swift */; };
 		DB6A21B01F964BDB007CE01D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6A21AE1F964BDB007CE01D /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36DC1631E03A53FD737FB8C7 /* Pods_RetoSantander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetoSantander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		866E8366A20A5A6BD42423EF /* Pods-RetoSantander.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoSantander.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetoSantander/Pods-RetoSantander.debug.xcconfig"; sourceTree = "<group>"; };
+		CE695F72CBD201F63A2B9E9D /* Pods-RetoSantander.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoSantander.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetoSantander/Pods-RetoSantander.release.xcconfig"; sourceTree = "<group>"; };
 		DB6A21A71F964BDA007CE01D /* RetoSantander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetoSantander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6A21AA1F964BDB007CE01D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB6A21AC1F964BDB007CE01D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC1C793EE2407D213D8940C /* Pods_RetoSantander.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FE5983ECB3583CE7251F7AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36DC1631E03A53FD737FB8C7 /* Pods_RetoSantander.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DB6A219E1F964BDA007CE01D = {
 			isa = PBXGroup;
 			children = (
 				DB6A21A91F964BDA007CE01D /* RetoSantander */,
 				DB6A21A81F964BDA007CE01D /* Products */,
+				FFFB3468B79E0D63115B84ED /* Pods */,
+				5FE5983ECB3583CE7251F7AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = RetoSantander;
 			sourceTree = "<group>";
 		};
+		FFFB3468B79E0D63115B84ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				866E8366A20A5A6BD42423EF /* Pods-RetoSantander.debug.xcconfig */,
+				CE695F72CBD201F63A2B9E9D /* Pods-RetoSantander.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB6A21B91F964BDB007CE01D /* Build configuration list for PBXNativeTarget "RetoSantander" */;
 			buildPhases = (
+				2457661F2DE94EAE6D82C128 /* [CP] Check Pods Manifest.lock */,
 				DB6A21A31F964BDA007CE01D /* Sources */,
 				DB6A21A41F964BDA007CE01D /* Frameworks */,
 				DB6A21A51F964BDA007CE01D /* Resources */,
+				FC70FF0D301B2CF4DD86ED9B /* [CP] Embed Pods Frameworks */,
+				99B1327A8C1053B272A774A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2457661F2DE94EAE6D82C128 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RetoSantander-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99B1327A8C1053B272A774A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetoSantander/Pods-RetoSantander-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC70FF0D301B2CF4DD86ED9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RetoSantander/Pods-RetoSantander-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetoSantander/Pods-RetoSantander-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DB6A21A31F964BDA007CE01D /* Sources */ = {
@@ -214,6 +299,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -264,6 +350,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -272,14 +359,17 @@
 		};
 		DB6A21BA1F964BDB007CE01D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 866E8366A20A5A6BD42423EF /* Pods-RetoSantander.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 326NE3RM2J;
 				INFOPLIST_FILE = RetoSantander/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.accenture.RetoSantander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -287,14 +377,17 @@
 		};
 		DB6A21BB1F964BDB007CE01D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE695F72CBD201F63A2B9E9D /* Pods-RetoSantander.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 326NE3RM2J;
 				INFOPLIST_FILE = RetoSantander/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.accenture.RetoSantander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

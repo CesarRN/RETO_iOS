@@ -1,0 +1,13 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+target 'RetoSantander' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for RetoSantander
+  pod 'Alamofire'  #Libreria para descargar el feed de informacion
+  pod 'Kingfisher'  #Libreria para descargar y tratamiento de imagenes
+  pod 'SwiftyJSON', :git => 'https://github.com/appsailor/SwiftyJSON', :branch => 'swift3'  #Libreria para parseo y tratamiento de informacion
+
+end
