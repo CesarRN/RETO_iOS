@@ -14,7 +14,7 @@
 			<key>Key</key>
 			<string>url_preference</string>
 			<key>DefaultValue</key>
-			<string>http://www.xatakandroid.com/tag/feeds/rss2.xml</string>
+			<string>https://newsapi.org/v1/articles?source=bbc-news&amp;apiKey=a23c08a9795943e293324c43444b120a</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>KeyboardType</key>
