@@ -17,5 +17,16 @@ struct Settings {
 
 struct Default {
     
-    static let url = "http://www.xatakandroid.com/tag/feeds/rss2.xml"
+    static let url = "https://newsapi.org/v1/articles?source=bbc-news&apiKey=a23c08a9795943e293324c43444b120a"
+}
+
+struct Storyboards {
+    
+    static let main: String = "Main"
+}
+
+struct ScenesId {
+    
+    static let master: String = "MasterViewController"
+    static let detail: String = "DetailViewController"
 }
