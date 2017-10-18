@@ -84,19 +84,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var newBBC: NewBBC!
-        //Si estamos en modo búsqueda pasamos los datos del elemento filtrado correspondiente
-        if inSearchMode {
-            newBBC = filteredNewsBBC[indexPath.row]
-        //En caso contrario, pasamos los datos del elemento correspondiente
-        } else {
-            newBBC = newsBBC[indexPath.row]
-        }
-        performSegue(withIdentifier: "DetailVC", sender: newBBC)
-    }
-    
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         //Si la caja de búsqueda no contiene ningún texto
         if (searchBar.text == nil || searchBar.text == "") {
@@ -115,10 +102,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if let detailVC = segue.destination as? DetailVC {
-            if let newBBC = sender as? NewBBC {
-                detailVC.newBBC = newBBC
+        if segue.identifier == "DetailVC"  {
+            let detailVC = segue.destination as! DetailVC
+            var newBBC: NewBBC!
+            //Si estamos en modo búsqueda pasamos los datos del elemento filtrado correspondiente
+            if inSearchMode {
+                newBBC = filteredNewsBBC[(tableView.indexPathForSelectedRow?.row)!]
+                //En caso contrario, pasamos los datos del elemento correspondiente
+            } else {
+                newBBC = newsBBC[(tableView.indexPathForSelectedRow?.row)!]
             }
+            
+            detailVC.newBBC = newBBC
         }
     }
 
