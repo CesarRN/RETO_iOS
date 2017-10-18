@@ -105,6 +105,7 @@
                                             <outlet property="URLImage" destination="gNe-8c-ggi" id="aWv-jP-MCE"/>
                                             <outlet property="descriptionLabel" destination="4xf-an-46g" id="6Cb-lB-Yhj"/>
                                             <outlet property="titleLabel" destination="HJ7-Va-b85" id="lg9-7O-T0n"/>
+                                            <segue destination="cKs-bA-rak" kind="showDetail" id="uaU-xv-WXa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
