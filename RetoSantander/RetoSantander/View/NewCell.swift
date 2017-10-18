@@ -24,7 +24,7 @@ class NewCell: UITableViewCell {
     func configureCell(new: NewBBC) {
         self.newBBC = new
         titleLabel.text = new.title
-        descriptionLabel.text = new.newDescription
+        descriptionLabel.text = new.ampliada
         URLImage.downloadedFrom(link: new.urlToImage!)
     }
 

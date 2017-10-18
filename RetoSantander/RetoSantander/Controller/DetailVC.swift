@@ -21,7 +21,7 @@ class DetailVC: UIViewController {
         if newBBC != nil {
             self.title = newBBC.title
             titleLabel.text = newBBC.title
-            descriptionTextView.text = newBBC.newDescription
+            descriptionTextView.text = newBBC.ampliada
             image.downloadedFrom(link: newBBC.urlToImage!, contentMode: UIViewContentMode.scaleAspectFill)
         }
 
