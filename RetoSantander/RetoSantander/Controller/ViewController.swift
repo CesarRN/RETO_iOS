@@ -33,11 +33,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //Añade sombra a la barra de navegación
         self.addShadowNavigationBar()
         
-        let new1 = NewBBC(author: "Prueba 1", title: "Prueba de título 1", newDescription: "Prueba de descripción 1", url: "", urlToImage: "https://static1.squarespace.com/static/524b0cc5e4b052d320043cd2/t/5261693fe4b0c00e49809c00/1382115659249/coffee-cup.jpg?format=2500w", publishedAt: "")
+        let new1 = NewBBC(author: "Prueba 1", title: "Prueba de título 1", newDescription: "Prueba de descripción 1", url: "", urlToImage: "https://static1.squarespace.com/static/524b0cc5e4b052d320043cd2/t/5261693fe4b0c00e49809c00/1382115659249/coffee-cup.jpg?format=2500w", publishedAt: nil)
         
-        let new2 = NewBBC(author: "Prueba 2", title: "Prueba de título 2", newDescription: "Prueba de descripción 2", url: "", urlToImage: "https://static1.squarespace.com/static/524b0cc5e4b052d320043cd2/t/5261693fe4b0c00e49809c00/1382115659249/coffee-cup.jpg?format=2500w", publishedAt: "")
+        let new2 = NewBBC(author: "Prueba 2", title: "Prueba de título 2", newDescription: "Prueba de descripción 2", url: "", urlToImage: "https://static1.squarespace.com/static/524b0cc5e4b052d320043cd2/t/5261693fe4b0c00e49809c00/1382115659249/coffee-cup.jpg?format=2500w", publishedAt: nil)
         
-        let new3 = NewBBC(author: "Prueba 3", title: "Prueba de título 3", newDescription: "Prueba de descripción 3", url: "", urlToImage: "https://static1.squarespace.com/static/524b0cc5e4b052d320043cd2/t/5261693fe4b0c00e49809c00/1382115659249/coffee-cup.jpg?format=2500w", publishedAt: "")
+        let new3 = NewBBC(author: "Prueba 3", title: "Prueba de título 3", newDescription: "Prueba de descripción 3", url: "", urlToImage: "https://static1.squarespace.com/static/524b0cc5e4b052d320043cd2/t/5261693fe4b0c00e49809c00/1382115659249/coffee-cup.jpg?format=2500w", publishedAt: nil)
         
         newsBBC.append(new1)
         newsBBC.append(new2)

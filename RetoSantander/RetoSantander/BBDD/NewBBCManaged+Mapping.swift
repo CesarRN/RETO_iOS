@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NewBBC {
+extension NewBBCManaged {
     
     func mappedObject() -> NewBBC{
         return NewBBC(author:self.author, title:self.title, newDescription:self.newDescription, url:self.url, urlToImage:self.urlToImage, publishedAt:self.publishedAt)

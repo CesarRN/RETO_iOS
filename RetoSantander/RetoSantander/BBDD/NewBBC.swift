@@ -14,9 +14,9 @@ class NewBBC {
     let newDescription: String?
     let url: String?
     let urlToImage: String?
-    let publishedAt: String?
+    let publishedAt: Date?
     
-    init(author: String?, title:String?, newDescription: String?, url:String?, urlToImage:String?, publishedAt:String?){
+    init(author: String?, title:String?, newDescription: String?, url:String?, urlToImage:String?, publishedAt:Date?){
         
         self.author = author
         self.title = title
