@@ -15,6 +15,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var date: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +23,13 @@ class DetailVC: UIViewController {
             self.title = newBBC.title
             titleLabel.text = newBBC.title
             descriptionTextView.text = newBBC.newDescription
+            date.text =  Utils.formatNSDate(date: newBBC.publishedAt! as NSDate)
             image.downloadedFrom(link: newBBC.urlToImage!, contentMode: UIViewContentMode.scaleAspectFill)
         }
-
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func goToWebPress(_ sender: Any) {
+        let url = URL(string: newBBC.url!)
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+    }
 }

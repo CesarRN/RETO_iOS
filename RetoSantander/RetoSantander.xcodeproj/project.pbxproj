@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE41CF181F973A7700BA9504 /* LocalCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41CF171F973A7700BA9504 /* LocalCoreDataService.swift */; };
 		0B5280651F96A32500942250 /* UIViewController+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5280641F96A32500942250 /* UIViewController+ext.swift */; };
 		0B5280671F96A92C00942250 /* UImageview+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5280661F96A92C00942250 /* UImageview+Ext.swift */; };
 		0BBFBE091F9687290030A912 /* NewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFBE081F9687290030A912 /* NewCell.swift */; };
@@ -20,7 +19,9 @@
 		0BFB40261F96884D0015571E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BFB40221F96884D0015571E /* Main.storyboard */; };
 		0BFB40271F96884D0015571E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BFB40241F96884D0015571E /* LaunchScreen.storyboard */; };
 		0BFB402B1F96893C0015571E /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB402A1F96893C0015571E /* DetailVC.swift */; };
+		3D405FB11F97B386002ABE7E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D405FB01F97B386002ABE7E /* Utils.swift */; };
 		3DDF9F111F97490500367906 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF9F101F97490500367906 /* CustomNavigationBar.swift */; };
+		AE41CF181F973A7700BA9504 /* LocalCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41CF171F973A7700BA9504 /* LocalCoreDataService.swift */; };
 		CAC1C793EE2407D213D8940C /* Pods_RetoSantander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC1631E03A53FD737FB8C7 /* Pods_RetoSantander.framework */; };
 		DB6A21BE1F9657AA007CE01D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A21BD1F9657AA007CE01D /* CoreDataStack.swift */; };
 		DB6A21C11F9657F9007CE01D /* NewsDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB6A21BF1F9657F9007CE01D /* NewsDB.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 		0BFB40251F96884D0015571E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BFB402A1F96893C0015571E /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		36DC1631E03A53FD737FB8C7 /* Pods_RetoSantander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetoSantander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D405FB01F97B386002ABE7E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3DDF9F101F97490500367906 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		866E8366A20A5A6BD42423EF /* Pods-RetoSantander.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoSantander.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetoSantander/Pods-RetoSantander.debug.xcconfig"; sourceTree = "<group>"; };
 		AE41CF171F973A7700BA9504 /* LocalCoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCoreDataService.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				0BFB40201F96882D0015571E /* Constants.swift */,
+				3D405FB01F97B386002ABE7E /* Utils.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				0BFB402B1F96893C0015571E /* DetailVC.swift in Sources */,
 				0BFB401E1F9687FE0015571E /* FancyView.swift in Sources */,
 				0BBFBE091F9687290030A912 /* NewCell.swift in Sources */,
+				3D405FB11F97B386002ABE7E /* Utils.swift in Sources */,
 				3DDF9F111F97490500367906 /* CustomNavigationBar.swift in Sources */,
 				DB6A21C51F965A6B007CE01D /* NewBBC.swift in Sources */,
 				0B5280651F96A32500942250 /* UIViewController+ext.swift in Sources */,

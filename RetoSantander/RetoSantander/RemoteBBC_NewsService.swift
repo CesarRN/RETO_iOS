@@ -33,7 +33,7 @@ class RemoteBBC_NewsService {
                         var newBBC = [String:String]()
                         newBBC["author"] = entry["author"].stringValue
                         newBBC["title"] = entry["title"].stringValue
-                        newBBC["newDescription"] = entry["newDescription"].stringValue
+                        newBBC["newDescription"] = entry["description"].stringValue
                         newBBC["url"] = entry["url"].stringValue
                         newBBC["urlToImage"] = entry["urlToImage"].stringValue
                         newBBC["publishedAt"] = entry["publishedAt"].stringValue
