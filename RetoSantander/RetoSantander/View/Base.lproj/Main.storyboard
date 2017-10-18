@@ -127,7 +127,6 @@
                     <connections>
                         <outlet property="searchBar" destination="XFQ-vR-lVe" id="yEE-d2-jA3"/>
                         <outlet property="tableView" destination="gC8-gM-pbk" id="IHo-ab-jQ9"/>
-                        <segue destination="PE4-tm-4OZ" kind="show" identifier="DetailVC" id="fu5-e5-iAx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
