@@ -27,7 +27,7 @@ class LocalCoreDataService {
                 
                 for newBBCDictionary in news {
                     
-                    if let new = self.getNewByDate(date: newBBCDictionary["publishedAt"]!) {
+                    if let new = self.getNewByDate(date: newBBCDictionary["title"]!) {
                         self.updateNewBB(newBBCDictionary: newBBCDictionary, newBBC: new)
                     } else {
                         self.insertNewBBC(newBBCDictionary: newBBCDictionary)
@@ -52,7 +52,7 @@ class LocalCoreDataService {
         let context = stack.persistentContainer.viewContext
         let request : NSFetchRequest<NewBBCManaged> = NewBBCManaged.fetchRequest()
         
-        let sortDescriptor = NSSortDescriptor(key: "publishedAt", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "publishedAt", ascending: false)
         request.sortDescriptors = [sortDescriptor]
         
         do {
@@ -77,13 +77,9 @@ class LocalCoreDataService {
         let context = stack.persistentContainer.viewContext
         let request : NSFetchRequest<NewBBCManaged> = NewBBCManaged.fetchRequest()
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
-        let dateNewBBC = dateFormatter.date(from: date)!
-        
-        let predicate = NSPredicate(format: "publishedAt = \(dateNewBBC)") //dateNewBBC
+        let predicate = NSPredicate(format: "title == %@",date as String)
         request.predicate = predicate
+        
         
         do {
             
@@ -126,7 +122,7 @@ class LocalCoreDataService {
         
         newBBC.author = newBBCDictionary["author"]
         newBBC.title = newBBCDictionary["title"]
-        newBBC.newDescription = newBBCDictionary["newDescription"]
+        newBBC.ampliada = newBBCDictionary["ampliada"]
         newBBC.url = newBBCDictionary["url"]
         newBBC.urlToImage = newBBCDictionary["urlToImage"]
         
