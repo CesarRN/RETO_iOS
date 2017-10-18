@@ -20,3 +20,23 @@ enum WeekDays: Int {
          saturday = 6
 }
 
+struct Settings {
+    
+    static let url = "url_preference"
+}
+
+struct Default {
+    
+    static let url = "https://newsapi.org/v1/articles?source=bbc-news&apiKey=a23c08a9795943e293324c43444b120a"
+}
+
+struct Storyboards {
+    
+    static let main: String = "Main"
+}
+
+struct ScenesId {
+    
+    static let master: String = "MasterViewController"
+    static let detail: String = "DetailViewController"
+}

@@ -14,9 +14,14 @@ class RemoteBBC_NewsService {
     
     func getBBC_News(completionHandler: @escaping ([[String:String]]?) -> Void) {
         
-        let url = URL(string: "https://newsapi.org/v1/articles?source=bbc-news&apiKey=a23c08a9795943e293324c43444b120a")!
+        guard let strUrl = UserDefaults.standard.string(forKey:Settings.url) else {
+            
+            return
+        }
         
-        Alamofire.request(url, method: .get, encoding: URLEncoding.default, headers: nil).validate().responseJSON() { response in
+        if let url = URL(string: strUrl) {
+            
+            Alamofire.request(url, method: .get).validate().responseJSON() { response in
             
             switch response.result {
                 
@@ -33,7 +38,7 @@ class RemoteBBC_NewsService {
                         var newBBC = [String:String]()
                         newBBC["author"] = entry["author"].stringValue
                         newBBC["title"] = entry["title"].stringValue
-                        newBBC["newDescription"] = entry["description"].stringValue
+                        newBBC["ampliada"] = entry["description"].stringValue
                         newBBC["url"] = entry["url"].stringValue
                         newBBC["urlToImage"] = entry["urlToImage"].stringValue
                         newBBC["publishedAt"] = entry["publishedAt"].stringValue
@@ -51,7 +56,7 @@ class RemoteBBC_NewsService {
                 completionHandler(nil)
                 
             }
-            
+        }
         }
     }
 }

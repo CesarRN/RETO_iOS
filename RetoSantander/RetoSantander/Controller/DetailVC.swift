@@ -22,7 +22,7 @@ class DetailVC: UIViewController {
         if newBBC != nil {
             self.title = newBBC.title
             titleLabel.text = newBBC.title
-            descriptionTextView.text = newBBC.newDescription
+            descriptionTextView.text = newBBC.ampliada
             date.text =  Utils.formatNSDate(date: newBBC.publishedAt! as NSDate)
             image.downloadedFrom(link: newBBC.urlToImage!, contentMode: UIViewContentMode.scaleAspectFill)
         }

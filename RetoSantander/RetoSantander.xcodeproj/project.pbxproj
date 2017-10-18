@@ -20,6 +20,7 @@
 		0BFB40271F96884D0015571E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BFB40241F96884D0015571E /* LaunchScreen.storyboard */; };
 		0BFB402B1F96893C0015571E /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB402A1F96893C0015571E /* DetailVC.swift */; };
 		3D405FB11F97B386002ABE7E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D405FB01F97B386002ABE7E /* Utils.swift */; };
+		17B673FF1F979ED1009D7BB9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17B673FE1F979ED1009D7BB9 /* Settings.bundle */; };
 		3DDF9F111F97490500367906 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF9F101F97490500367906 /* CustomNavigationBar.swift */; };
 		AE41CF181F973A7700BA9504 /* LocalCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41CF171F973A7700BA9504 /* LocalCoreDataService.swift */; };
 		CAC1C793EE2407D213D8940C /* Pods_RetoSantander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC1631E03A53FD737FB8C7 /* Pods_RetoSantander.framework */; };
@@ -43,6 +44,7 @@
 		0BFB40231F96884D0015571E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0BFB40251F96884D0015571E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BFB402A1F96893C0015571E /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		17B673FE1F979ED1009D7BB9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		36DC1631E03A53FD737FB8C7 /* Pods_RetoSantander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetoSantander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D405FB01F97B386002ABE7E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3DDF9F101F97490500367906 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				0BFB401B1F9687A40015571E /* Assets.xcassets */,
 				0BBFBE0A1F9687310030A912 /* Info.plist */,
+				17B673FE1F979ED1009D7BB9 /* Settings.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				0BFB40261F96884D0015571E /* Main.storyboard in Resources */,
 				0BFB40271F96884D0015571E /* LaunchScreen.storyboard in Resources */,
+				17B673FF1F979ED1009D7BB9 /* Settings.bundle in Resources */,
 				0BBFBE0B1F9687310030A912 /* Info.plist in Resources */,
 				0BFB401C1F9687A40015571E /* Assets.xcassets in Resources */,
 			);

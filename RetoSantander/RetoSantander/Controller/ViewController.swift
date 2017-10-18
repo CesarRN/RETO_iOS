@@ -14,12 +14,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var searchBar: UISearchBar!
 
     //Array de noticias
-    var newsBBC = [NewBBC]()
+    var newsBBC:[NewBBC] = [NewBBC]()
     //Array de noticias filtradas
     var filteredNewsBBC = [NewBBC]()
 
     //Variable que indica si estamos en modo búsqueda
     var inSearchMode = false
+    
+    let dataProvider = LocalCoreDataService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,33 +35,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //Añade sombra a la barra de navegación
         self.addShadowNavigationBar()
         
+        loadData()
 
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-
-        let isoDate1 = "2017-10-18T14:31:00Z"
-        let date1 = dateFormatter.date(from: isoDate1)
-        
-        let isoDate2 = "2017-10-18T08:51:35Z"
-        let date2 = dateFormatter.date(from: isoDate2)
-        
-        let isoDate3 = "2017-10-18T11:12:51ZZ"
-        let date3 = dateFormatter.date(from: isoDate3)
-        
-        let new1 = NewBBC(author: "Prueba 1", title: "Prueba de título 1", newDescription: "Prueba de descripción 1", url: "https://www.google.es/", urlToImage: "https://static1.squarespace.com/static/524b0cc5e4b052d320043cd2/t/5261693fe4b0c00e49809c00/1382115659249/coffee-cup.jpg?format=2500w", publishedAt: date1)
-
-        let new2 = NewBBC(author: "Prueba 2", title: "Prueba de título 2", newDescription: "Prueba de descripción 2", url: "https://www.google.es/", urlToImage: "https://static1.squarespace.com/static/524b0cc5e4b052d320043cd2/t/5261693fe4b0c00e49809c00/1382115659249/coffee-cup.jpg?format=2500w", publishedAt:date2)
-
-        let new3 = NewBBC(author: "Prueba 3", title: "Prueba de título 3", newDescription: "Prueba de descripción 3", url: "https://www.google.es/", urlToImage: "https://static1.squarespace.com/static/524b0cc5e4b052d320043cd2/t/5261693fe4b0c00e49809c00/1382115659249/coffee-cup.jpg?format=2500w", publishedAt: date3)
-
-        newsBBC.append(new1)
-        newsBBC.append(new2)
-        newsBBC.append(new3)
-        
-        newsBBC = Utils.orderNewsByDate(newsBBC: newsBBC)
-        
-        tableView.reloadData()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -137,5 +114,35 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
     }
+    
+    func loadData () {
+        dataProvider.getBBC_News(localHandler: { news in
+            
+            if let news = news {
+                self.newsBBC = news
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            }else {
+                
+                print("No hay registros en Core Data")
+            }
+            
+        }, remoteHandler: { news in
+            if let news = news {
+                self.newsBBC = news
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+            
+        })
+        
+    }
+    
+
+
 }
+
 
