@@ -11,16 +11,16 @@ import Foundation
 class NewBBC {
     let author: String?
     let title: String?
-    let newDescription: String?
     let url: String?
     let urlToImage: String?
     let publishedAt: Date?
+    let ampliada:String?
     
-    init(author: String?, title:String?, newDescription: String?, url:String?, urlToImage:String?, publishedAt:Date?){
+    init(author: String?, title:String?, ampliada: String?, url:String?, urlToImage:String?, publishedAt:Date?){
         
         self.author = author
         self.title = title
-        self.newDescription = newDescription
+        self.ampliada = ampliada
         self.url = url
         self.urlToImage = urlToImage
         self.publishedAt = publishedAt
