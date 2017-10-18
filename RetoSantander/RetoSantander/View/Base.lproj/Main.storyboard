@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CBN-4r-DR7">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,11 +21,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RetoSantander" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Busca una noticia..." translatesAutoresizingMaskIntoConstraints="NO" id="XFQ-vR-lVe">
-                                <rect key="frame" x="0.0" y="72" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="40" width="667" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="9FC-26-rAY"/>
                                 </constraints>
@@ -33,18 +33,18 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gC8-gM-pbk">
-                                <rect key="frame" x="0.0" y="147" width="375" height="520"/>
+                                <rect key="frame" x="0.0" y="115" width="667" height="260"/>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewCell" rowHeight="176" id="80h-1j-dFu" customClass="NewCell" customModule="RetoSantander" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="176"/>
+                                        <rect key="frame" x="0.0" y="28" width="667" height="176"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="80h-1j-dFu" id="seu-gc-Mwp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="176"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V20-aG-5ub" customClass="FancyView" customModule="RetoSantander" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="8" width="343" height="142"/>
+                                                    <rect key="frame" x="16" y="8" width="635" height="142"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee-cup" translatesAutoresizingMaskIntoConstraints="NO" id="gNe-8c-ggi">
                                                             <rect key="frame" x="16" y="16" width="130" height="110"/>
@@ -58,8 +58,8 @@
                                                                 </constraint>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ7-Va-b85">
-                                                            <rect key="frame" x="158" y="17" width="177" height="23.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ7-Va-b85">
+                                                            <rect key="frame" x="158" y="17" width="469" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Descripción" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xf-an-46g">
-                                                            <rect key="frame" x="158" y="48.5" width="177" height="77.5"/>
+                                                            <rect key="frame" x="158" y="48.5" width="469" height="77.5"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -139,20 +139,20 @@
             <objects>
                 <viewController id="PE4-tm-4OZ" customClass="DetailVC" customModule="RetoSantander" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N2n-ba-zCy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R84-IG-KeC">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="32" width="667" height="343"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvN-hF-7yq">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2909.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="1538.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee-cup" translatesAutoresizingMaskIntoConstraints="NO" id="ChV-Li-FYp">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee-cup" translatesAutoresizingMaskIntoConstraints="NO" id="ChV-Li-FYp">
+                                                <rect key="frame" x="0.0" y="0.0" width="667" height="150"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep1-Lb-nii">
-                                                <rect key="frame" x="24" y="283" width="327" height="30.5"/>
+                                                <rect key="frame" x="24" y="166" width="619" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -161,7 +161,7 @@
                                                 </variation>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X8R-eh-FMy">
-                                                <rect key="frame" x="24" y="407.5" width="327" height="2501"/>
+                                                <rect key="frame" x="24" y="290.5" width="619" height="1247"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">El entrenador del Barcelona, Ernesto Valverde, compareció en rueda de prensa en la previa del choque que el conjunto azulgrana disputará este miércoles contra Olympiacos en el Camp Nou. El técnico extremeño valoró la importancia de lograr los tres puntos y dejó claro que Messi será para él "el mejor del mundo" aunque Cristiano Ronaldo gane el Balón de Oro.Planteamiento defensivo. "Intentarán hacer un partido de desgaste y sorprendernos hasta el final. Están necesitados y por experiencia sé que lo pelearán hasta que no haya opciones".Olympiacos. "Es emocionante jugar contra Olympiacos. Especialmente cuando lo hagamos allí, en un estadio donde he disfrutado mucho, un campo con cancha. La plantilla ha cambiado mucho, pero se mantiene mucha gente en el club. Recibí mucho cariño allí. Es un club acostumbrado a ganar".Desgaste en el Wanda. "Es un partido importante el de mañana, cosa que no cambiará antes de medirnos al Málaga. Pondremos el equipo que mejor vaya para el partido en cuestión. El sábado se notó el desgaste de las selecciones, pero han pasado tres días y mañana serán cuatro".Momento del equipo. "Estamos contentos. En agosto veníamos de perder dos partidos con el Madrid y hemos ido mejorando. Una buena lectura para mí es que tanto en Getafe como contra el Atlético nos fuimos al descanso perdiendo y acabamos remontando. Eso me deja que el equipo tiene espíritu. Estamos progresando".Umtiti. "Es un jugador fundamental para nosotros. Estamos absolutamente contentos con él. Tiene agresividad, salida de balón y juego aéreo. Es joven y todavía nos puede dar mucho más".La posición de Dembélé. "En función de los partidos escojo un jugador u otro. Tenemos muchas opciones y perfiles. El otro día puse a André, que es fuerte, tiene estrategia y puede taponar la banda rival, que en el caso del Atlético es muy fuerte. Luego Deulofeu, ya se sabe: puede desequilibrar un partido en cualquier momento, más cuando ya está avanzado".Descartes. "Hay muchos jugadores que merecen jugar. Para mí es un problema hacer la lista de convocados después del entrenamiento".Cariño a Olympiacos. "No sé por qué les caigo tan bien a los del Olympiacos. El cariño es recíproco, los griegos siempre me trataron fenomenal. Y más importante que lo que gané allí (tres ligas y dos copas) es la gente que conocí".La importancia de ser primero de grupo. "Mejor primeros que segundos. Le doy importancia, claro. Primero porque das un golpe de autoridad, segundo porque tienes el factor campo. La intención de todo deportista siempre es quedar el primero, si puede".Títulos. "Uno cuando empieza un proyecto nunca sabe cómo va a terminar. Grecia es un sitio difícil, además. Para los entrenadores no es sencillo. Aquí espero ganar títulos. De momento, hemos perdido uno".Balón de Oro. "Todos sabemos cuál es el mejor jugador del mundo. El tema del trofeo no es una cuestión que me preocupe demasiado. Yo ya sé cuál es el mejor (Messi). No me importa ni un balón más ni un balón menos. Ni de oro, ni de plata ni de bronce".Cambio desde la Supercopa. "Tenemos muy buenos jugadores, con una gran ambición. La clave del cambio han sido ellos".Paulinho. "Es un jugador diferente a los que tenemos. Piensa más en la llegada en ataque que en el control. Cuando sale de refresco nos aporta cosas porque rompe las líneas del rival. Esperamos sacarle mucho partido".Vestuario diferente. "Me he tenido que adaptar al club y a los jugadores. Es diferente este vestuario al que tenía en el Athletic. Trato de transmitirles qué es lo mejor para el equipo. En una empresa supongo que será parecido".José Arnáiz. "Ha llegado este año al Barça B y ha empezado muy bien la temporada. Es joven, con desparpajo, desborde y tiene gol. Siempre miramos el B, que en cierta manera forma parte de nuestro equipo porque podemos acudir a él en función de nuestras necesidades".</string>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
@@ -171,13 +171,13 @@
                                                 </variation>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xk-38-yAb">
-                                                <rect key="frame" x="24" y="321" width="327" height="23.5"/>
+                                                <rect key="frame" x="24" y="204" width="619" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMV-VA-tjs">
-                                                <rect key="frame" x="24" y="362.5" width="327" height="37"/>
+                                                <rect key="frame" x="24" y="245.5" width="619" height="37"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                 <state key="normal" title="Ir a la Web">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -245,7 +245,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CBN-4r-DR7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ct8-DR-v3y" customClass="CustomNavigationBar" customModule="RetoSantander" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="1" green="0.1077257702" blue="0.03010541785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

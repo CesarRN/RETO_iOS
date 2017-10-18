@@ -24,7 +24,7 @@ class DetailVC: UIViewController {
             titleLabel.text = newBBC.title
             descriptionTextView.text = newBBC.ampliada
             date.text =  Utils.formatNSDate(date: newBBC.publishedAt! as NSDate)
-            image.downloadedFrom(link: newBBC.urlToImage!, contentMode: UIViewContentMode.scaleAspectFill)
+            image.downloadedFrom(link: newBBC.urlToImage!, contentMode: UIViewContentMode.scaleAspectFit)
         }
     }
 

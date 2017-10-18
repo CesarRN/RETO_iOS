@@ -19,8 +19,8 @@
 		0BFB40261F96884D0015571E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BFB40221F96884D0015571E /* Main.storyboard */; };
 		0BFB40271F96884D0015571E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BFB40241F96884D0015571E /* LaunchScreen.storyboard */; };
 		0BFB402B1F96893C0015571E /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB402A1F96893C0015571E /* DetailVC.swift */; };
-		3D405FB11F97B386002ABE7E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D405FB01F97B386002ABE7E /* Utils.swift */; };
 		17B673FF1F979ED1009D7BB9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17B673FE1F979ED1009D7BB9 /* Settings.bundle */; };
+		3D405FB11F97B386002ABE7E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D405FB01F97B386002ABE7E /* Utils.swift */; };
 		3DDF9F111F97490500367906 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF9F101F97490500367906 /* CustomNavigationBar.swift */; };
 		AE41CF181F973A7700BA9504 /* LocalCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41CF171F973A7700BA9504 /* LocalCoreDataService.swift */; };
 		CAC1C793EE2407D213D8940C /* Pods_RetoSantander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC1631E03A53FD737FB8C7 /* Pods_RetoSantander.framework */; };

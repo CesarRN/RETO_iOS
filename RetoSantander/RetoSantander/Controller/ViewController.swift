@@ -39,12 +39,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        //Para iOs 11 añade top a la navigation bar para que no solape al resto del contenido
-        if #available(iOS 11.0, *) {
-            self.additionalSafeAreaInsets.top = 10
-        }
-    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
