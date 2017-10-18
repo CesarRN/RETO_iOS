@@ -25,6 +25,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.register(defaults: appDefaults)
             UserDefaults.standard.synchronize()
         }
+        
+        let splitViewController =  UISplitViewController()
+        let masterViewcontroller = self.setupMasterScene()
+        let detailViewController = self.setupDetailScene()
+
+        let rootNavigationController = UINavigationController(rootViewController:masterViewcontroller)
+        let detailNavigationController = UINavigationController(rootViewController:detailViewController)
+        splitViewController.viewControllers = [rootNavigationController,detailNavigationController]
+
+        self.window!.rootViewController = splitViewController
+        self.window!.makeKeyAndVisible()
+        
         return true
     }
 
@@ -50,6 +62,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    
+    fileprivate func setupMasterScene() -> UIViewController {
+        
+        let masterViewController = viewController(storyboardId: Storyboards.main, sceneId: ScenesId.master) as! ViewController
+        
+        return masterViewController
+    }
+    
+    fileprivate func setupDetailScene() -> UIViewController {
+        
+        let detailViewController = viewController(storyboardId: Storyboards.main, sceneId: ScenesId.detail) as! DetailVC
+        
+        return detailViewController
+    }
+    
+    fileprivate func viewController(storyboardId: String, sceneId: String) -> UIViewController? {
+        
+        let storyboard = UIStoryboard(name: storyboardId, bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: sceneId)
+        
+        return viewController
+    }
 }
 
