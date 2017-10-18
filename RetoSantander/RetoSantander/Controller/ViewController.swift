@@ -14,12 +14,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var searchBar: UISearchBar!
 
     //Array de noticias
-    var newsBBC = [NewBBC]()
+    var newsBBC:[NewBBC] = [NewBBC]()
     //Array de noticias filtradas
     var filteredNewsBBC = [NewBBC]()
 
     //Variable que indica si estamos en modo búsqueda
     var inSearchMode = false
+    
+    let dataProvider = LocalCoreDataService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,17 +35,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //Añade sombra a la barra de navegación
         self.addShadowNavigationBar()
         
-        let new1 = NewBBC(author: "Prueba 1", title: "Prueba de título 1", newDescription: "Prueba de descripción 1", url: "", urlToImage: "https://static1.squarespace.com/static/524b0cc5e4b052d320043cd2/t/5261693fe4b0c00e49809c00/1382115659249/coffee-cup.jpg?format=2500w", publishedAt: nil)
-        
-        let new2 = NewBBC(author: "Prueba 2", title: "Prueba de título 2", newDescription: "Prueba de descripción 2", url: "", urlToImage: "https://static1.squarespace.com/static/524b0cc5e4b052d320043cd2/t/5261693fe4b0c00e49809c00/1382115659249/coffee-cup.jpg?format=2500w", publishedAt: nil)
-        
-        let new3 = NewBBC(author: "Prueba 3", title: "Prueba de título 3", newDescription: "Prueba de descripción 3", url: "", urlToImage: "https://static1.squarespace.com/static/524b0cc5e4b052d320043cd2/t/5261693fe4b0c00e49809c00/1382115659249/coffee-cup.jpg?format=2500w", publishedAt: nil)
-        
-        newsBBC.append(new1)
-        newsBBC.append(new2)
-        newsBBC.append(new3)
-        
-        tableView.reloadData()
+        loadData()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -121,6 +114,35 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
     }
+    
+    func loadData () {
+        dataProvider.getBBC_News(localHandler: { news in
+            
+            if let news = news {
+                self.newsBBC = news
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            }else {
+                
+                print("No hay registros en Core Data")
+            }
+            
+        }, remoteHandler: { news in
+            if let news = news {
+                self.newsBBC = news
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+            
+        })
+        
+    }
+    
+
 
 }
+
 
