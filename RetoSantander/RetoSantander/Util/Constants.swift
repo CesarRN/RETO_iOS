@@ -10,3 +10,12 @@ import UIKit
 
 let SHADOW_GRAY: CGFloat = 120 / 255
 
+struct Settings {
+    
+    static let url = "url_preference"
+}
+
+struct Default {
+    
+    static let url = "http://www.xatakandroid.com/tag/feeds/rss2.xml"
+}
