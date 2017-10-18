@@ -21,43 +21,42 @@ class RemoteBBC_NewsService {
         
         if let url = URL(string: strUrl) {
             
-            Alamofire.request(url, method: .get, encoding: URLEncoding.default, headers: nil).validate().responseJSON() { response in
+            Alamofire.request(url, method: .get).validate().responseJSON() { response in
+            
+            switch response.result {
                 
-                switch response.result {
+            case .success:
+                
+                if let value = response.result.value {
                     
-                case .success:
+                    let json = JSON(value)
+                    var result = [[String:String]]()
+                    let entries = json["articles"].arrayValue
                     
-                    if let value = response.result.value {
+                    for entry in entries {
                         
-                        let json = JSON(value)
-                        var result = [[String:String]]()
-                        let entries = json["articles"].arrayValue
-                        
-                        for entry in entries {
-                            
-                            var newBBC = [String:String]()
-                            newBBC["author"] = entry["author"].stringValue
-                            newBBC["title"] = entry["title"].stringValue
-                            newBBC["newDescription"] = entry["newDescription"].stringValue
-                            newBBC["url"] = entry["url"].stringValue
-                            newBBC["urlToImage"] = entry["urlToImage"].stringValue
-                            newBBC["publishedAt"] = entry["publishedAt"].stringValue
-                            result.append(newBBC)
-                            
-                        }
-                        
-                        completionHandler(result)
+                        var newBBC = [String:String]()
+                        newBBC["author"] = entry["author"].stringValue
+                        newBBC["title"] = entry["title"].stringValue
+                        newBBC["ampliada"] = entry["description"].stringValue
+                        newBBC["url"] = entry["url"].stringValue
+                        newBBC["urlToImage"] = entry["urlToImage"].stringValue
+                        newBBC["publishedAt"] = entry["publishedAt"].stringValue
+                        result.append(newBBC)
                         
                     }
                     
-                case .failure(let error):
-                    
-                    print(error)
-                    completionHandler(nil)
+                    completionHandler(result)
                     
                 }
                 
+            case .failure(let error):
+                
+                print(error)
+                completionHandler(nil)
+                
             }
+        }
         }
     }
 }
