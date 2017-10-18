@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE41CF181F973A7700BA9504 /* LocalCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41CF171F973A7700BA9504 /* LocalCoreDataService.swift */; };
 		CAC1C793EE2407D213D8940C /* Pods_RetoSantander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC1631E03A53FD737FB8C7 /* Pods_RetoSantander.framework */; };
 		DB6A21AB1F964BDB007CE01D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A21AA1F964BDB007CE01D /* AppDelegate.swift */; };
 		DB6A21AD1F964BDB007CE01D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A21AC1F964BDB007CE01D /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		36DC1631E03A53FD737FB8C7 /* Pods_RetoSantander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetoSantander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		866E8366A20A5A6BD42423EF /* Pods-RetoSantander.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoSantander.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetoSantander/Pods-RetoSantander.debug.xcconfig"; sourceTree = "<group>"; };
+		AE41CF171F973A7700BA9504 /* LocalCoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCoreDataService.swift; sourceTree = "<group>"; };
 		CE695F72CBD201F63A2B9E9D /* Pods-RetoSantander.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoSantander.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetoSantander/Pods-RetoSantander.release.xcconfig"; sourceTree = "<group>"; };
 		DB6A21A71F964BDA007CE01D /* RetoSantander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetoSantander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6A21AA1F964BDB007CE01D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,17 +89,9 @@
 				DB6A21B31F964BDB007CE01D /* LaunchScreen.storyboard */,
 				DB6A21B61F964BDB007CE01D /* Info.plist */,
 				DB6A21C61F965F63007CE01D /* RemoteBBC_NewsService.swift */,
+				AE41CF171F973A7700BA9504 /* LocalCoreDataService.swift */,
 			);
 			path = RetoSantander;
-			sourceTree = "<group>";
-		};
-		FFFB3468B79E0D63115B84ED /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				866E8366A20A5A6BD42423EF /* Pods-RetoSantander.debug.xcconfig */,
-				CE695F72CBD201F63A2B9E9D /* Pods-RetoSantander.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		DB6A21BC1F965776007CE01D /* BBDD */ = {
@@ -109,6 +103,15 @@
 				DB6A21C41F965A6B007CE01D /* NewBBC.swift */,
 			);
 			path = BBDD;
+			sourceTree = "<group>";
+		};
+		FFFB3468B79E0D63115B84ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				866E8366A20A5A6BD42423EF /* Pods-RetoSantander.debug.xcconfig */,
+				CE695F72CBD201F63A2B9E9D /* Pods-RetoSantander.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +251,7 @@
 				DB6A21AD1F964BDB007CE01D /* ViewController.swift in Sources */,
 				DB6A21C11F9657F9007CE01D /* NewsDB.xcdatamodeld in Sources */,
 				DB6A21AB1F964BDB007CE01D /* AppDelegate.swift in Sources */,
+				AE41CF181F973A7700BA9504 /* LocalCoreDataService.swift in Sources */,
 				DB6A21C51F965A6B007CE01D /* NewBBC.swift in Sources */,
 				DB6A21C31F965A5C007CE01D /* NewBBCManaged+Mapping.swift in Sources */,
 				DB6A21C71F965F63007CE01D /* RemoteBBC_NewsService.swift in Sources */,
