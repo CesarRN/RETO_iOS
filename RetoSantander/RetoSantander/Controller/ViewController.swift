@@ -12,7 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    
     //Array de noticias
     var newsBBC:[NewBBC] = [NewBBC]()
     //Array de noticias filtradas
@@ -109,6 +110,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func loadData () {
+        loading.isHidden = false
         dataProvider.getBBC_News(localHandler: { news in
             
             if let news = news {
@@ -123,6 +125,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
         }, remoteHandler: { news in
+            self.loading.isHidden = true
             if let news = news {
                 self.newsBBC = news
                 DispatchQueue.main.async {
