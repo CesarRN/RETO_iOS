@@ -19,7 +19,7 @@ class LocalCoreDataService {
     
     func getBBC_News(localHandler: ([NewBBC]?) -> Void, remoteHandler: @escaping ([NewBBC]?) -> Void) {
         
-        localHandler(self.queryNews())
+        localHandler(self.queryGetNews())
         
         remoteNewService.getBBC_News() { news in
             
@@ -27,15 +27,15 @@ class LocalCoreDataService {
                 
                 for newBBCDictionary in news {
                     
-                    if let new = self.getNewByDate(date: newBBCDictionary["title"]!) {
-                        self.updateNewBB(newBBCDictionary: newBBCDictionary, newBBC: new)
+                    if let new = self.getNewByTitle(title: newBBCDictionary["title"]!) {
+                        self.updateNewBBC(newBBCDictionary: newBBCDictionary, newBBC: new)
                     } else {
                         self.insertNewBBC(newBBCDictionary: newBBCDictionary)
                     }
                     
                 }
                 
-                remoteHandler(self.queryNews())
+                remoteHandler(self.queryGetNews())
                 
             } else {
                 remoteHandler(nil)
@@ -47,7 +47,7 @@ class LocalCoreDataService {
     }
     
 
-    func queryNews() -> [NewBBC]? {
+    func queryGetNews() -> [NewBBC]? {
         
         let context = stack.persistentContainer.viewContext
         let request : NSFetchRequest<NewBBCManaged> = NewBBCManaged.fetchRequest()
@@ -72,12 +72,12 @@ class LocalCoreDataService {
     }
 
 
-    func getNewByDate(date: String) -> NewBBCManaged? {
+    func getNewByTitle(title: String) -> NewBBCManaged? {
         
         let context = stack.persistentContainer.viewContext
         let request : NSFetchRequest<NewBBCManaged> = NewBBCManaged.fetchRequest()
         
-        let predicate = NSPredicate(format: "title == %@",date as String)
+        let predicate = NSPredicate(format: "title == %@",title as String)
         request.predicate = predicate
         
         
@@ -103,28 +103,28 @@ class LocalCoreDataService {
         let context = stack.persistentContainer.viewContext
         let newBBC = NewBBCManaged(context: context)
         
+        newBBC.title = newBBCDictionary["title"]
+        
+        updateNewBBC(newBBCDictionary: newBBCDictionary, newBBC: newBBC)
+    }
+    
+    
+    func updateNewBBC(newBBCDictionary: [String:String], newBBC: NewBBCManaged) {
+        
+        let context = stack.persistentContainer.viewContext
+        
+        newBBC.author = newBBCDictionary["author"]
+        newBBC.ampliada = newBBCDictionary["ampliada"]
+        newBBC.url = newBBCDictionary["url"]
+        newBBC.urlToImage = newBBCDictionary["urlToImage"]
+        
         //Convertir de string a date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
         let date = dateFormatter.date(from: newBBCDictionary["publishedAt"]!)
-
+        
         newBBC.publishedAt = date;
-        
-        
-        updateNewBB(newBBCDictionary: newBBCDictionary, newBBC: newBBC)
-    }
-    
-    
-    func updateNewBB(newBBCDictionary: [String:String], newBBC: NewBBCManaged) {
-        
-        let context = stack.persistentContainer.viewContext
-        
-        newBBC.author = newBBCDictionary["author"]
-        newBBC.title = newBBCDictionary["title"]
-        newBBC.ampliada = newBBCDictionary["ampliada"]
-        newBBC.url = newBBCDictionary["url"]
-        newBBC.urlToImage = newBBCDictionary["urlToImage"]
         
         do {
             try context.save()
