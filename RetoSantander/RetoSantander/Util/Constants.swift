@@ -12,13 +12,30 @@ let SHADOW_GRAY: CGFloat = 120 / 255
 
 enum WeekDays: Int {
     case sunday = 0,
-         monday = 1,
-         tuesday = 2,
-         wednesday = 3,
-         thursday = 4,
-         friday = 5,
-         saturday = 6
+    monday = 1,
+    tuesday = 2,
+    wednesday = 3,
+    thursday = 4,
+    friday = 5,
+    saturday = 6
 }
+
+enum Months: Int {
+    case January = 1,
+    February = 2,
+    March = 3,
+    April = 4,
+    May = 5,
+    June = 6,
+    July = 7,
+    August = 8,
+    September = 9,
+    October = 10,
+    November = 11,
+    December = 12
+}
+
+
 
 struct Settings {
     

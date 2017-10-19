@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B5280651F96A32500942250 /* UIViewController+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5280641F96A32500942250 /* UIViewController+ext.swift */; };
 		0B5280671F96A92C00942250 /* UImageview+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5280661F96A92C00942250 /* UImageview+Ext.swift */; };
+		0B52806C1F97F8ED00942250 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B52806E1F97F8ED00942250 /* Localizable.strings */; };
 		0BBFBE091F9687290030A912 /* NewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFBE081F9687290030A912 /* NewCell.swift */; };
 		0BBFBE0B1F9687310030A912 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BBFBE0A1F9687310030A912 /* Info.plist */; };
 		0BBFBE0E1F96873C0030A912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFBE0C1F96873C0030A912 /* AppDelegate.swift */; };
@@ -34,6 +35,9 @@
 /* Begin PBXFileReference section */
 		0B5280641F96A32500942250 /* UIViewController+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ext.swift"; sourceTree = "<group>"; };
 		0B5280661F96A92C00942250 /* UImageview+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UImageview+Ext.swift"; sourceTree = "<group>"; };
+		0B5280691F97F64F00942250 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		0B52806D1F97F8ED00942250 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0B52806F1F97F93900942250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0BBFBE081F9687290030A912 /* NewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCell.swift; sourceTree = "<group>"; };
 		0BBFBE0A1F9687310030A912 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BBFBE0C1F96873C0030A912 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 				0BFB401B1F9687A40015571E /* Assets.xcassets */,
 				0BBFBE0A1F9687310030A912 /* Info.plist */,
 				17B673FE1F979ED1009D7BB9 /* Settings.bundle */,
+				0B52806E1F97F8ED00942250 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BFB40261F96884D0015571E /* Main.storyboard in Resources */,
+				0B52806C1F97F8ED00942250 /* Localizable.strings in Resources */,
 				0BFB40271F96884D0015571E /* LaunchScreen.storyboard in Resources */,
 				17B673FF1F979ED1009D7BB9 /* Settings.bundle in Resources */,
 				0BBFBE0B1F9687310030A912 /* Info.plist in Resources */,
@@ -339,10 +345,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0B52806E1F97F8ED00942250 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B52806D1F97F8ED00942250 /* en */,
+				0B52806F1F97F93900942250 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		0BFB40221F96884D0015571E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0BFB40231F96884D0015571E /* Base */,
+				0B5280691F97F64F00942250 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

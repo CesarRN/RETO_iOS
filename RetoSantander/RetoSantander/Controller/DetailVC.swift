@@ -27,7 +27,7 @@ class DetailVC: UIViewController {
             image.downloadedFrom(link: newBBC.urlToImage!, contentMode: UIViewContentMode.scaleAspectFit)
         }
     }
-
+    
     @IBAction func goToWebPress(_ sender: Any) {
         let url = URL(string: newBBC.url!)
         UIApplication.shared.open(url!, options: [:], completionHandler: nil)

@@ -36,9 +36,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.addShadowNavigationBar()
         
         loadData()
-
     }
-    
+        
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

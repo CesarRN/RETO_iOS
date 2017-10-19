@@ -12,7 +12,7 @@ class CustomNavigationBar: UINavigationBar {
 
     
     // NavigationBar height
-    var customHeight : CGFloat = 80
+    var customHeight : CGFloat = 64
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: customHeight)
@@ -35,7 +35,7 @@ class CustomNavigationBar: UINavigationBar {
                 subview.frame = CGRect(x: subview.frame.origin.x, y: 20, width: subview.frame.width, height: customHeight)
                 subview.backgroundColor = self.backgroundColor
             }
-        }
+        }        
     }
 
 }
