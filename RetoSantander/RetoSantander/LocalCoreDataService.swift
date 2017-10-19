@@ -2,7 +2,7 @@
 //  LocalCoreDataService.swift
 //  RetoSantander
 //
-//  Created by Juan Francisco Cordoba Cardeñas on 18/10/2017.
+//  Created by iOSDev2 on 18/10/2017.
 //  Copyright © 2017 Accenture, S.L. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  DetailVC.swift
 //  RetoSantander
 //
-//  Created by José Ignacio Sanz García on 17/10/17.
+//  Created by iOSDev2 on 18/10/2017.
 //  Copyright © 2017 Accenture, S.L. All rights reserved.
 //
 
